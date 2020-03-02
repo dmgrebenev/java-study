@@ -3,6 +3,7 @@
 последовательность). Найти длину самой длинной неубывающей подпоследователь-
 ности подряд идущих чисел.
  */
+package Theme1;
 
 import java.util.Scanner;
 
@@ -10,22 +11,20 @@ public class Task1_15 {
     public static void main(String[] args) {
         System.out.println("Введите последовательность вещественных чисел");
         Scanner input = new Scanner(System.in);
+
         Integer value = null;
-        int i = 1;
-        int counter = 0;
-        Integer tmp = null;
+        Integer previousValue = null;
+        int currentCounter = 1;
+        int totalCounter = 1;
+
         while (value == null || !value.equals(0)) {
-            if (tmp != null && value >= tmp) {
-                i++;
+            if (previousValue != null) {
+                currentCounter = (value >= previousValue) ? currentCounter + 1 :  1;
+                if (totalCounter < currentCounter) {totalCounter++;}
             }
-            else {
-                if (i > 1 && i > counter) {counter = i;}
-                i = 1;
-            }
-            tmp = value;
+            previousValue = value;
             value = input.nextInt();
         }
-        System.out.println(counter);
+        System.out.println(totalCounter);
     }
-
 }
