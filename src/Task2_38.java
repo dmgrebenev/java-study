@@ -87,11 +87,8 @@ final class InputParameters {
     private final int countColumn;
 
     public InputParameters() throws Exception {
-        int countRow = setParameter("Количество cтрок");
-        int countColumn = setParameter("Количество столбцов");
-
-        this.countRow = countRow;
-        this.countColumn = countColumn;
+        this.countRow = setParameter("Количество cтрок");
+        this.countColumn = setParameter("Количество столбцов");
     }
 
     public int countRow() {
