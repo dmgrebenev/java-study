@@ -11,13 +11,7 @@ public class Task2_38 {
     public static void main(String[] args) throws Exception {
         InputParameters matrixSize = new InputParameters();
         int[][] matrix = createMatrix(matrixSize.countRow(), matrixSize.countColumn());
-        showMatrixInTerminal(matrix);
-        String command = setCommand();
-        while (!command.equals("exit")) {
-            matrix = shiftMatrix(matrix, command);
-            showMatrixInTerminal(matrix);
-            command = setCommand();
-        }
+        makingMatrices(matrix);
     }
 
     private static int[][] createMatrix(int countRow, int countColumn) {
@@ -34,6 +28,15 @@ public class Task2_38 {
         }
 
         return matrix;
+    }
+
+    private static void makingMatrices(int[][] matrix){
+        String command = null;
+        while (command == null || !command.equals("exit")) {
+            if (command != null) {matrix = shiftMatrix(matrix, command);}
+            showMatrixInTerminal(matrix);
+            command = setCommand();
+        }
     }
 
     private static void showMatrixInTerminal(int[][] matrix) {
