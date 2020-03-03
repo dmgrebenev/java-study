@@ -8,7 +8,6 @@
 package Theme2;
 
 import Helpers.InputParameters;
-import java.util.Scanner;
 
 public class Task2_18 {
     public static void main(String[] args) throws Exception {
