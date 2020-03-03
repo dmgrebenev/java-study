@@ -49,8 +49,6 @@ public class Task1_25 {
     private static void resultBuilder(Double x1, Double x2){
         String message = null;
         DecimalFormat df = new DecimalFormat("###.###");
-        df.format(x1);
-        df.format(x2);
         if (x1 == 0) {
             message = "X1 = 0";
             if (x2 != null && x2 > 0) {message = message + "\nX2 = " + df.format(x2)+ "\nX3 = " + df.format(-x2); }
