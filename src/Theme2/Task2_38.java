@@ -5,12 +5,12 @@
 Сдвинуть циклически элементы змейки на одну позицию к концу
  */
 package Theme2;
-
 import java.util.Scanner;
+import Helpers.InputParameters;
 
 public class Task2_38 {
     public static void main(String[] args) throws Exception {
-        InputParameters matrixSize = new InputParameters();
+        InputParameters matrixSize = new InputParameters("2_38");
         int[][] matrix = createMatrix(matrixSize.countRow(), matrixSize.countColumn());
         makingMatrices(matrix);
     }
@@ -83,30 +83,3 @@ public class Task2_38 {
 
 }
 
-final class InputParameters {
-    private final int countRow;
-    private final int countColumn;
-
-    public InputParameters() throws Exception {
-        this.countRow = setParameter("Количество cтрок");
-        this.countColumn = setParameter("Количество столбцов");
-    }
-
-    public int countRow() {
-        return countRow;
-    }
-
-    public int countColumn() {
-        return countColumn;
-    }
-
-    private int setParameter(String parameter) throws Exception {
-        System.out.println("Введите " + parameter);
-        Scanner input = new Scanner(System.in);
-        int inputParameter = input.nextInt();
-        if (inputParameter < 1) {
-            throw new Exception(parameter + " должно быть целым положительным числом");
-        }
-        return inputParameter;
-    }
-}
