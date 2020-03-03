@@ -56,7 +56,7 @@ public class InputParameters {
         this.countRow = setParameter("количество cтрок");
         checkError((countRow < 1), "Количество cтрок должно быть целым положительным числом");
         this.countColumn = setParameter("Количество столбцов");
-        checkError((countRow < 1), "Количество столбцов должно быть целым положительным числом");
+        checkError((countColumn < 1), "Количество столбцов должно быть целым положительным числом");
     }
 
     private static int setParameter(String parameter) throws Exception {
