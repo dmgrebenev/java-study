@@ -5,16 +5,16 @@
  */
 
 package Theme1;
+import Helpers.InputParameters;
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task1_18_2 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Введите натуральное число:");
-        int num = Integer.parseInt(reader.readLine());
+        int num = (new InputParameters("")).a();
 
         int mantis = 0;
         int newNum = 0;

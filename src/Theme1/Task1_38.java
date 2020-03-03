@@ -7,15 +7,11 @@
  */
 
 package Theme1;
-import java.util.*;
+import Helpers.InputParameters;
 
 public class Task1_38 {
-    public static void main(String[] args) {
-        System.out.println("Введите натуральное число");
-
-        Scanner input = new Scanner(System.in);
-        int number;
-        number = input.nextInt();
+    public static void main(String[] args) throws Exception{
+        int number = (new InputParameters("")).a();
 
 //       i1 знаменатель, i2 числитель
         for (int i1 = 1; i1 <= number; i1++) {

@@ -5,14 +5,10 @@
  */
 
 package Theme1;
-import java.util.*;
+import Helpers.InputParameters;
 public class Task1_18_1 {
-    public static void main(String[] args) {
-        System.out.println("Введите натуральное число");
-
-        Scanner input = new Scanner(System.in);
-        int number;
-        number = input.nextInt();
+    public static void main(String[] args) throws Exception {
+        int number = (new InputParameters("")).a();
 
         String invert_result = "";
         int remainder;
@@ -28,7 +24,5 @@ public class Task1_18_1 {
         do {
             System.out.printf("" +(result % 10)+ "");
         } while ((result /= 10) != 0);
-
-        input.close();
     }
 }

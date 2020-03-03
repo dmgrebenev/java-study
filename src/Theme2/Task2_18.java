@@ -7,17 +7,12 @@
 
 package Theme2;
 
+import Helpers.InputParameters;
 import java.util.Scanner;
 
 public class Task2_18 {
     public static void main(String[] args) throws Exception {
-        System.out.println("Введите натуральное число больше 1");
-        Scanner input = new Scanner(System.in);
-        int number = input.nextInt();
-        if (number < 2) {
-            throw new Exception("Введенное число некорретно");
-        }
-        input.close();
+        int number = (new InputParameters("2_18")).a();
         int[] array1 = createArray(number);
         int[] array2 = createArray(number);
         System.out.println(showArray("Первый массив:", array1));

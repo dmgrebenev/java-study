@@ -5,14 +5,11 @@
  */
 
 package Theme1;
-import java.util.*;
+import Helpers.InputParameters;
 public class Task1_18_3 {
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int number;
-        System.out.println("Введите число");
-        number = input.nextInt();
+    public static void main(String[] args) throws Exception {
+        int number = (new InputParameters("")).a();
 
         int[] arr = new int[10];
         int cnt = digits(arr, number);
