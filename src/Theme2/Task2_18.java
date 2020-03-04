@@ -13,12 +13,11 @@ public class Task2_18 {
     public static void main(String[] args) throws Exception {
         int number = (new InputParameters("2_18")).a();
         int[] array1 = createArray(number);
+        showArray("Первый массив:", array1);
         int[] array2 = createArray(number);
-        System.out.println(showArray("Первый массив:", array1));
-        System.out.println(showArray("Второй массив:", array2));
-
+        showArray("Второй массив:", array2);
         int[] resultArray = combineArray(array1, array2);
-        System.out.println(showArray("Итоговый массив:", resultArray));
+        showArray("Итоговый массив:", resultArray);
 
     }
 
@@ -90,12 +89,12 @@ public class Task2_18 {
         }
     }
 
-    private static String showArray(String message, int[] showingArray) {
+    private static void showArray(String message, int[] showingArray) {
         System.out.println(message);
         String arrayAsString = "";
         for (int value : showingArray) {
             arrayAsString = arrayAsString + " " + value;
         }
-        return arrayAsString;
+        System.out.println(arrayAsString);
     }
 }
