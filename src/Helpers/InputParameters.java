@@ -1,6 +1,7 @@
 package Helpers;
 
 import java.util.Scanner;
+import java.io.*;
 
 public class InputParameters {
     int countRow;
@@ -8,6 +9,7 @@ public class InputParameters {
     int a;
     int b;
     int c;
+    public File file;
 
     public int countRow() { return countRow; }
 
@@ -29,6 +31,9 @@ public class InputParameters {
                 break;
             case "2_38":
                 setParametersTask2_38();
+                break;
+            case "3_18":
+                setParameterTask3_18();
                 break;
             default:
                 setParametersNat();
@@ -57,6 +62,27 @@ public class InputParameters {
         checkError((countRow < 1), "Количество cтрок должно быть целым положительным числом");
         this.countColumn = setParameter("Количество столбцов");
         checkError((countColumn < 1), "Количество столбцов должно быть целым положительным числом");
+    }
+
+    private void setParameterTask3_18() {
+        System.out.println("Введите путь к файлу с данными по студентам");
+        Scanner input = new Scanner(System.in);
+        String path  = input.nextLine();
+//        File file = new File(path);
+//
+//        int b, count = 0;
+//        try {
+//            FileReader is = new FileReader(file);
+//            while ((b = is.read()) != -1) {//чтение
+//                System.out.print((char)b);
+//                count++;
+//            }
+//            is.close(); // закрытие потока ввода
+//        } catch (IOException e) {
+//            System.err.println("ошибка файла: " + e);
+//        }
+//        System.out.print("\n число байт = " + count);
+        this.file = new File(path);
     }
 
     private static int setParameter(String parameter) throws Exception {
