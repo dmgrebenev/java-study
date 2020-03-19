@@ -68,20 +68,6 @@ public class InputParameters {
         System.out.println("Введите путь к файлу с данными по студентам");
         Scanner input = new Scanner(System.in);
         String path  = input.nextLine();
-//        File file = new File(path);
-//
-//        int b, count = 0;
-//        try {
-//            FileReader is = new FileReader(file);
-//            while ((b = is.read()) != -1) {//чтение
-//                System.out.print((char)b);
-//                count++;
-//            }
-//            is.close(); // закрытие потока ввода
-//        } catch (IOException e) {
-//            System.err.println("ошибка файла: " + e);
-//        }
-//        System.out.print("\n число байт = " + count);
         this.file = new File(path);
     }
 
